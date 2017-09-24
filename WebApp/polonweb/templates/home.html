@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Welcome to Polish IT Ranking Database{% endblock %}
+{% block head %}Welcome to Polish IT Ranking Database{% endblock %}
+{% block content %}
+
+    <div align="right">
+        <a href="{% url "logout" %}">Logout</a>
+    </div>
+
+
+	<p>Kindly Welcome! Here U can find some metrics collected about Polish IT researchers.</br></br></p>
+
+	<div align="center">	
+		<div align="left">
+
+		<p align="left"><b>PhDs</b></p>
+		<div align="left">
+			<ul>
+				<li><a href="{% url "google_scholar_citations_dr" %}">Researchers Metrics Sorted by the <i>Number of Citations</i> in <b>Google Scholar</b></a></li>
+                <li><a href="{% url "google_scholar_hindex_dr" %}">Researchers Metrics Sorted by the <i>H-index</i> in <b>Google Scholar</b></a></li>
+				<li><a href="{% url "dblp_num_of_pubs_dr" %}">Researchers Metrics Sorted by the <i>Number of Publications</i> in <b>DBLP</b></a></li>
+				<li><a href="{% url "scopus_hindex_dr" %}">Researchers Metrics Sorted by the <i>H-Index</i> in <b>Scopus</b></a></li>
+				<li><a href="{% url "scopus_num_of_pubs_dr" %}">Researchers Metrics Sorted by the <i>Number of Publications</i> in <b>Scopus</b></a></li><br/>
+			</ul>
+		</div>
+		<br/>
+
+		<p align="left"><b>Professors</b></p>
+		<div align="left">
+			<ul>
+				<li><a href="{% url "google_scholar_citations_drhab" %}">Researchers Metrics Sorted by the <i>Number of Citations</i> in <b>Google Scholar</b></a></li>
+                                <li><a href="{% url "google_scholar_hindex_drhab" %}">Researchers Metrics Sorted by the <i>H-index</i> in <b>Google Scholar</b></a></li>
+				<li><a href="{% url "dblp_num_of_pubs_drhab" %}">Researchers Metrics Sorted by the <i>Number of Publications</i> in <b>DBLP</b></a></li>
+				<li><a href="{% url "scopus_hindex_drhab" %}">Researchers Metrics Sorted by the <i>H-Index</i> in <b>Scopus</b></a></li>
+				<li><a href="{% url "scopus_num_of_pubs_drhab" %}">Researchers Metrics Sorted by the <i>Number of Publications</i> in <b>Scopus</b></a></li><br/>
+			</ul>
+		</div>
+		<br/>
+
+		<p align="left"><b>All (PhDs and Professors)</b></p>
+		<div align="left">
+			<ul>
+                        	<li><a href="{% url "google_scholar_citations_all" %}">Researchers Metrics Sorted by the <i>Number of Citations</i> in <b>Google Scholar</b></a></li>
+                        	<li><a href="{% url "google_scholar_hindex_all" %}">Researchers Metrics Sorted by the <i>H-index</i> in <b>Google Scholar</b></a></li>
+                        	<li><a href="{% url "dblp_num_of_pubs_all" %}">Researchers Metrics Sorted by the <i>Number of Publications</i> in <b>DBLP</b></a></li>
+                        	<li><a href="{% url "scopus_num_of_pubs_all" %}">Researchers Metrics Sorted by the <i>Number of Publications</i> in <b>Scopus</b></a></li>
+                        	<li><a href="{% url "scopus_hindex_all" %}">Researchers Metrics Sorted by the <i>H-Index</i> in <b>Scopus</b></a></li><br/>
+                	</ul>
+		</div>
+		<br/>
+	</div>
+{% endblock %} 
